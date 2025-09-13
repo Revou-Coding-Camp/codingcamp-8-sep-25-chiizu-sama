@@ -3,57 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Company Profile - Getthecode!</title>
 </head>
-<body>
+<body></body>
     <div class="min-h-screen bg-gray-100 flex flex-col">
         <!-- Header -->
         <header class="bg-white shadow">
             <div class="container mx-auto px-4 py-6 flex justify-between items-center">
                 <h1 class="text-3xl font-bold text-gray-800">Getthecode!</h1>
-                <nav>
-                    <ul class="flex space-x-4">
-                        <li><a href="#" class="text-gray-600 hover:text-gray-800">Home</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-800">About</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-800">Services</a></li>
-                        <li><a href="#" class="text-gray-600 hover:text-gray-800">Contact</a></li>    
-                    </ul>
-                </nav>
+                        <nav>
+                        <ul class="flex">
+                            <li><a class="border p-[8px] rounded" href="#home">Home</a></li>
+                            <li><a class="border p-[8px] rounded" href="#profile">Our Profile</a></li>
+                            <li><a class="border p-[8px] rounded" href="#portfolio">Portfolio</a></li>
+                            <li><a class="border p-[8px] rounded" href="#message-us">Message Us</a></li>
+                        </ul>
+                    </nav>
+
             </div>
         </header>  
         <!-- Main Content -->
-        <main class="flex-grow container mx-auto px-4 py-8">
-            <section class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-2xl font-bold mb-4 text-gray-800">About Us</h2>
-                <p class="text-gray-600 mb-4">
-                    Getthecode! is a leading software development company specializing in delivering high-quality web and mobile applications. Our team of experienced developers, designers, and project managers work collaboratively to create innovative solutions that meet our clients' needs.
-                </p>
-                <p class="text-gray-600 mb-4">
-                    Founded in 2010, we have successfully completed over 200 projects for clients across various industries, including healthcare, finance, education, and e-commerce. Our commitment to excellence and customer satisfaction has earned us a reputation as a trusted partner in the tech industry.
-                </p>
-                <h3 class="text-xl font-semibold mb-3 text-gray-800">Our Mission</h3>
-                <p class="text-gray-600 mb-4">
-                    Our mission is to empower businesses through technology by providing innovative and reliable software solutions that drive growth and efficiency.
-                </p>
-                <h3 class="text-xl font-semibold mb-3 text-gray-800">Our Values</h3>
-                <ul class="list-disc list-inside text-gray-600 mb-4">
-                    <li>Customer-Centric Approach</li>
-                    <li>Innovation and Creativity</li>
-                    <li>Integrity and Transparency</li>
-                    <li>Collaboration and Teamwork</li>
-                    <li>Continuous Learning and Improvement</li>
-                </ul>
-                <h3 class="text-xl font-semibold mb-3 text-gray-800">Contact Us</h3>
-                <p class="text-gray-600">
-                    For inquiries or more information about our services, please reach out to us at:
-                </p>
-                <p class="text-gray-600">
-                    Email:
-                    <a href="mailto:
+        <main>
+        <section id="home" class="min-h-screen flex items-center justify-center">
+            <h1 class="text-4xl font-bold">Welcome <span id="welcome-user">User</span>!</h1>
+        </section>
+
+        <section id="profile" class="min-h-screen flex items-center justify-center bg-gray-100">
+            <h2 class="text-3xl font-semibold">Our Profile</h2>
+        </section>
+
+        <section id="portfolio" class="min-h-screen flex items-center justify-center">
+            <h2 class="text-3xl font-semibold">Portfolio</h2>
+        </section>
+
+        <section id="message-us" class="min-h-screen flex flex-col items-center justify-evenly bg-gray-100">
+            <h2 class="text-3xl font-semibold">Message Us</h2>
+
+            <form class="mt-4">
+                <div class="mb-4">
+                    <label for="name" class="block mb-2">Name:</label>
+                    <input type="text" id="name" name="name" class="border p-2 w-full">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block mb-2">Email:</label>
+                    <input type="email" id="email" name="email" class="border p-2 w-full">
+                </div>
+                <div class="mb-4">
+                    <label for="message" class="block mb-2">Message:</label>
+                    <textarea id="message" name="message" class="border p-2 w-full" rows="4"></textarea>
+                </div>
+                <button type="button" onclick="validateForm();" class="bg-blue-500 text-white p-2 rounded">Send
+                    Message</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js\script.js"></script>
+
 </body>
 <footer class="bg-white shadow mt-8">
-    <div class="container mx-auto px-4 py-6 text-center text-gray-600">
+    <div class="container mx-auto px -4 py-6 text-center text-gray-600">
         &copy; 2025 Getthecode!. All rights reserved.
     </div>
 </html>
